@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: gilroy;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+}
+
+.page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 2vw;
+}
+
+.nav-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.nav-elem {
+  height: 2vh;
+  overflow: hidden;
+}
+
+.nav-elem > h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.9vw;
+}
+
+.page1-hero {
+  position: relative;
+  width: 100%;
+  /* background-color: salmon; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8vw;
+}
+
+.page1-hero > p {
+  margin-top: 2vw;
+  font-weight: 400;
+  font-size: 1.1vw;
+  color: #0000008e;
+}
+
+.hero-elem {
+  display: flex;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+  width: 70%;
+}
+
+.hero-elem > h1 {
+  font-size: 7vw;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.hero-elem p {
+  width: 30%;
+  color: #000000d0;
+  text-align: left;
+}
+
+.hero-elem > img {
+  height: 5vw;
+  border-radius: 50%;
+}
+
+.hero-img {
+  border-radius: 3vw !important;
+}
+
+.page1-hero-elem1 {
+  justify-content: center;
+}
+
+.page1-hero-elem2 {
+  justify-content: space-between;
+}
+
+.page1-hero-elem3 {
+  justify-content: center;
+}
+
+.page1-hero-stick {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  background-color: #000000;
+  transform: rotate(25deg);
+  mix-blend-mode: difference;
+  z-index: 9;
+  top: 10%;
+}
+
+.page2 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding-top: 6vw;
+}
+
+.page2-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page2-box-elem {
+  width: 70%;
+  margin-bottom: 6vw;
+}
+
+.page2-box-elem > p {
+  font-size: 2.2vw;
+  position: relative;
+  line-height: 1.5;
+}
+
+.page2-box-elem > p > span {
+  font-size: 1vw;
+  padding-left: 8vw;
+}
+
+.page2-box-elem > p::before {
+  content: "ABOUT STUDIO";
+  position: absolute;
+  top: 8%;
+  left: 0;
+  font-size: 0.9vw;
+}
+
+.page2-line {
+  position: relative;
+  height: 1px;
+  width: 70%;
+  background-color: #fff;
+  margin-top: 1vw;
+}
+
+.page2-line:nth-child(6) {
+  margin-top: 0;
+}
+
+.page2-box-elem2 {
+  position: relative;
+  width: 70%;
+  height: 9vh;
+  /* height: 45vh; */
+  overflow: hidden;
+}
+
+.page2-box-elem2-heading {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 0;
+  /* background-color: salmon; */
+}
+
+.page2-box-elem2-heading > h3 {
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5vw; */
+  width: 3vh;
+  height: 3vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-line {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.plus-line:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.page2-box-elem2 > p {
+  margin-top: 1vw;
+  font-size: 1.1vw;
+  width: 80%;
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.page2-box-elem3 {
+  position: relative;
+  width: 70%;
+  height: 9vh;
+  /* height: 38vh; */
+  overflow: hidden;
+}
+
+.page2-box-elem3-heading {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 0;
+  /* background-color: salmon; */
+}
+
+.page2-box-elem3-heading > h3 {
+  font-weight: 400;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+}
+
+.page2-box-elem3 > p {
+  margin-top: 1vw;
+  font-size: 1.1vw;
+  width: 80%;
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.page2-footer {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page2-footer > h1 {
+  font-size: 8vw;
+  width: 50%;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  z-index: 9;
+}
+
+.page2-footer > p {
+  margin-top: 2vw;
+  font-size: 0.9vw;
+  font-weight: 300;
+  width: 20%;
+  position: relative;
+  z-index: 9;
+}
+
+.page2-footer > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 70%;
+}
