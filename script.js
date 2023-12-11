@@ -651,3 +651,50 @@ plus2.addEventListener("click", () => {
     flag1 = 0;
   }
 });
+
+const page3Heading = document.querySelector(".page3-heading-right");
+const page3HeadingH3 = document.querySelectorAll(".page3-heading-right>h3");
+
+page3Heading.addEventListener("mouseenter", () => {
+  gsap.to(".page3-heading-right>h3", {
+    y: -20,
+    ease: "power3.inOut",
+  });
+});
+
+page3Heading.addEventListener("mouseleave", () => {
+  gsap.to(".page3-heading-right>h3", {
+    y: 0,
+    ease: "power3.inOut",
+  });
+});
+
+const imgH1 = document.querySelectorAll(".page3-titles>h1");
+const page3Img = document.querySelector(".page3-titles>.page3-img");
+const page3Title = document.querySelector(".page3-titles");
+
+page3Title.addEventListener("mousemove", (dets) => {
+  page3Img.style.top = dets.y - 200 + "px";
+  page3Img.style.left = dets.x - 400 + "px";
+  page3Img.style.width = "250px";
+  imgH1.forEach((h1, index) => {
+    h1.addEventListener("mouseenter", (dets) => {
+      console.log(index);
+      if (index === 0) {
+        page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/1.jpg")`;
+      } else if (index === 1) {
+        page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/2.jpg")`;
+      } else if (index === 2) {
+        page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/3.jpg")`;
+      } else if (index === 3) {
+        page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/4.jpg")`;
+      } else {
+        page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/5.jpg")`;
+      }
+    });
+  });
+});
+
+page3Title.addEventListener("mouseleave", () => {
+  page3Img.style.width = "0px";
+});
