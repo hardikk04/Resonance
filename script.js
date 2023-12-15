@@ -596,7 +596,7 @@ const navH3 = document.querySelectorAll(".nav-elem>h3");
 navElem.forEach((elem, index) => {
   elem.addEventListener("mouseenter", () => {
     gsap.to(elem.querySelectorAll("h3"), {
-      y: -20,
+      y: -25,
     });
   });
 
@@ -657,7 +657,7 @@ const page3HeadingH3 = document.querySelectorAll(".page3-heading-right>h3");
 
 page3Heading.addEventListener("mouseenter", () => {
   gsap.to(".page3-heading-right>h3", {
-    y: -20,
+    y: -25,
     ease: "power3.inOut",
   });
 });
@@ -679,7 +679,6 @@ page3Title.addEventListener("mousemove", (dets) => {
   page3Img.style.width = "250px";
   imgH1.forEach((h1, index) => {
     h1.addEventListener("mouseenter", (dets) => {
-      console.log(index);
       if (index === 0) {
         page3Img.style.backgroundImage = `url("https://resonance.bestlooker.pro/images/demo-modern/services/1.jpg")`;
       } else if (index === 1) {
@@ -697,4 +696,93 @@ page3Title.addEventListener("mousemove", (dets) => {
 
 page3Title.addEventListener("mouseleave", () => {
   page3Img.style.width = "0px";
+});
+
+const page4Heading = document.querySelector(".page4-heading-right");
+const page4HeadingH3 = document.querySelectorAll(".page4-heading-right>h3");
+
+page4Heading.addEventListener("mouseenter", () => {
+  gsap.to(".page4-heading-right>h3", {
+    y: -25,
+    ease: "power3.Out",
+  });
+});
+
+page4Heading.addEventListener("mouseleave", () => {
+  gsap.to(".page4-heading-right>h3", {
+    y: 0,
+    ease: "power3.Out",
+  });
+});
+
+const page5HeadingRight = document.querySelector(".page5-heading-right");
+const page5HeadingRightH3 = document.querySelectorAll(
+  ".page5-heading-right>h3"
+);
+
+page5HeadingRight.addEventListener("mouseenter", () => {
+  gsap.to(page5HeadingRightH3, {
+    y: -25,
+    ease: "power3.Out",
+  });
+});
+
+page5HeadingRight.addEventListener("mouseleave", () => {
+  gsap.to(page5HeadingRightH3, {
+    y: 0,
+    ease: "power3.Out",
+  });
+});
+
+const lenis = new Lenis();
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
+const t1 = gsap.timeline();
+
+t1.to(".page5-elem1", {
+  y: 100,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page5-elem1",
+    start: "top 100%",
+    // markers: true,
+    scrub: 1,
+  },
+});
+
+t1.to(".page5-elem3", {
+  y: -100,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page5-elem3",
+    start: "top 100%",
+    // markers: true,
+    scrub: 1,
+  },
+});
+
+const page6HeadingRight = document.querySelector(".page6-heading-right");
+const page6HeadingRightH3 = document.querySelectorAll(
+  ".page6-heading-right>h3"
+);
+
+page6HeadingRight.addEventListener("mouseenter", () => {
+  gsap.to(page6HeadingRightH3, {
+    y: -25,
+    ease: "power3.Out",
+  });
+});
+
+page6HeadingRight.addEventListener("mouseleave", () => {
+  gsap.to(page6HeadingRightH3, {
+    y: 0,
+    ease: "power3.Out",
+  });
 });
